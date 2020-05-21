@@ -38,11 +38,18 @@ public class MainActivity extends AppCompatActivity {
 //                실제로 출발
                 startActivity(myIntent);
 //                이액티비티를 종료하는 코드(이동하는것처럼 처리)
-                finish();
+//                finish();
 
             }
         });
 
+        binding.goToSecondBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent mind = new Intent(MainActivity.this,SecondActivity.class);
+                startActivity(mind);
+            }
+        });
     }
 
 //    화면에 나와야할 데이터세팅 코드 모아두는 곳
