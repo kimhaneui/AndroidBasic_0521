@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingComponent;
 import androidx.databinding.DataBindingUtil;
 
+import android.content.Intent;
 import android.database.DatabaseUtils;
 import android.os.Bundle;
 import android.view.View;
@@ -30,6 +31,14 @@ public class MainActivity extends AppCompatActivity {
         binding.goToFirstBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+//                 FirstActivity 로 이동
+//                출발은 this 도착은 class
+                Intent myIntent = new Intent(MainActivity.this, FirstActivity.class);
+//                실제로 출발
+                startActivity(myIntent);
+//                이액티비티를 종료하는 코드(이동하는것처럼 처리)
+                finish();
 
             }
         });
